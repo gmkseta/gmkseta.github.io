@@ -39,13 +39,13 @@ CTO가 되는게 가장 큰 직업적 목표입니다.
 
 ## 사이드프로젝트
 
-- [react-redux-material-meteor](https://github.com/isme2n/react-redux-material-meteor) - 보일러 플레이트
+- [react-redux-material-meteor](https://github.com/gmkseta/react-redux-material-meteor) - 보일러 플레이트
 
 - [48Wedding](http://48wedding.com) - 웨딩카드 만들기 서비스
 
 - [secretary](https://chrome.google.com/webstore/detail/secretary/bijcgcgbhmeemlnidoigdcnokggknikb?hl=ko) - 기사요약 크롬 확장서비스
 
-- [이미지필터](https://github.com/isme2n/react-image-filter-app) - 캔버스 이미지 필터를 공부하며 만든 샘플 앱
+- [이미지필터](https://github.com/gmkseta/react-image-filter-app) - 캔버스 이미지 필터를 공부하며 만든 샘플 앱
 
 - [유튜브 함께보기](https://youtu.be/7IFEO9D6G4Y) - 유튜브 동영상을 다른사람들과 함께 보며 대화를 나누는 앱
 
