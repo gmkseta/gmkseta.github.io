@@ -13,7 +13,7 @@ comments: true
 
 ### Personal Details
 
-**Name** : Seung June Kim
+**Name** : Seong June Kim
 
 **Date of Birth** : Januart 21th, 1991
 
