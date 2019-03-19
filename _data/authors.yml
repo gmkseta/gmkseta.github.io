@@ -23,7 +23,7 @@ gmkseta:
   # Comment/uncommet to show/hide
   # Icons appear in order, can be rearranged:
   social:
-    facebook:        gmkseta
+    # facebook:        gmkseta
     # twitter:         <username>
     # google:          <number>
     # vk:              <username>
@@ -33,7 +33,7 @@ gmkseta:
     # spotify:         <user>/<number>
     # soundcloud:      <username>
     # lastfm:          <username>
-    # instagram:       <username>
+    instagram:       castle_junny
     # flickr:          <string@string>
     # 500px:           <username>
     # dribbble:        <username>
