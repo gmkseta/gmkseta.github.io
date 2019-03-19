@@ -2,8 +2,8 @@
 layout: post
 title:  "[개발]가능한 지키려하는 개발 원칙"
 subtitle:   "가능한 지키려하는 개발 원칙"
-categories: devlog
-tags: tool nodejs react-native
+categories: dev
+tags: nodejs react-native
 
 ---
 
