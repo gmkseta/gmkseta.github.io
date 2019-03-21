@@ -3,7 +3,7 @@ layout: post
 title:  "[DEV]Stack"
 subtitle:   "Stack"
 categories: study
-tags: algorithm 자료구조
+tags: algorithm data_structure
 
 ---
 
