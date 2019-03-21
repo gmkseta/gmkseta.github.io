@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[개발]가능한 지키려하는 개발 원칙"
+title:  "[DEV]기존에 있던 게시물임 하나만 남겨두기"
 subtitle:   "가능한 지키려하는 개발 원칙"
 categories: study
 tags: algorithm react-native

@@ -8,7 +8,6 @@ tags: algorithm 자료구조
 ---
 
 ## STACK
-
 * Last in First Out
 
 ```python
