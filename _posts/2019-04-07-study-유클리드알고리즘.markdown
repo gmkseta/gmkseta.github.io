@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "[DEV] 최대공약수 구하기 - 유클리드 알고리즘"
+subtitle:   "최대공약수"
+categories: study
+tags: algorithm
+
+---
+
+## 유클리드 호제법
+
+### 정리
+
+$$ a,b \in \mathbb{Z}$$ 이고 
+
+$$ a\%b=r $$ ( $$  a\geq b $$  이고,$$ r$$은 $$0\leq r < b$$인 정수)
+
+$$a​$$와 $$b​$$의  최대공약수를 $$(a,b)​$$ 라고  하면, 다음이 성립한다.
+
+
+$$
+(a,b) = (b,r)
+$$
+
+### 증명
+
+$$a,b \in \mathbb{Z} ​$$ 이고, $${\displaystyle a\geq b}​$$라고 하자.
+
+그러면, $$ a=bq+r​$$을 만족하는 유일한 정수 $$ q,r​$$이 존재한다. 이때, $$0 \leq r<b​$$이다.
+
+$$\displaystyle \left(a,b\right) = d,a=d\alpha ,b=d\beta ​$$라고 하자. 즉, $$\alpha​$$와 $$\beta​$$는 서로소이다.
+
+​	$$ a = bq + r.​$$
+
+​	$$\Rightarrow d\alpha = d \beta q + r. $$
+
+​	$$\Rightarrow d|r.​$$(즉, r은 d의 배수)
+
+이제, $$r=d\rho $$라고 하자.
+
+만약 $$\left(\beta ,\rho \right)=d'>1​$$라면, $$\beta =d'\beta ',\rho =d'\rho '​$$으로 두었을 때,
+
+$$a = bq + r. ​$$
+
+​	$$\Rightarrow d\alpha = d\beta q+ d\rho = dd'\beta'q + dd'\rho' = dd'(\beta'q + \rho') ​$$.
+
+​	$$\Rightarrow \alpha = d'(\beta'q+\rho)$$.
+
+이므로 $$ d'|\alpha$$ 이다. (즉, a는 d'의 배수)
+
+즉, $$d' |\alpha, d' | \beta$$ 가 되어 $$\alpha$$ 와 $$\beta$$ 는 서로소라는 것에 모순이다.
+
+이는 $$\left(\beta ,\rho \right)=d'>1$$ 라는 가정에서 나타나는 모순이므로  $$\left(\beta ,\rho \right)=1​$$이다.
+
+따라서 곧$$\left(b,r\right)=d$$라는 것이다.
+
+
+
+```c++
+#include<iostream>
+
+int primeMax(int a, int b)
+{
+	return b ? primeMax(b, a%b) : a;
+}
+
+int main()
+{
+	using namespace std;
+	cout << primeMax(12, 18) << endl;
+	return 0;
+}
+```
+
+
+
+출처 [https://ko.wikipedia.org/wiki/유클리드_호제법](https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C_%ED%98%B8%EC%A0%9C%EB%B2%95)
