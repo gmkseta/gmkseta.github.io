@@ -1,50 +1,23 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
-      - master
-      - develop
+      - main
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
-  eslint:
-    name: eslint
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@v1
         with:
-          node-version: 10.x
-      - name: Install node packages
-        run: npm install
-      - name: Check eslint
-        run: npm run check:lint
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
 
-  prettier:
-    name: prettier
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          node-version: 10.x
-      - name: Install node packages
-        run: npm install
-      - name: Check prettier
-        run: npm run check:prettier
-
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      - name: Install node packages
-        run: npm install
-      - name: Check prettier
-        run: npm run build
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+          skip-publish: false
