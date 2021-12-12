@@ -88,7 +88,7 @@ const Toc = ({ items, articleOffset }) => {
   useEffect(() => {
     setHeaders(
       [
-        ...document.querySelectorAll("#article-body > h2, #article-body > h3"),
+        ...document.querySelectorAll("#article-body > h1, #article-body > h2, #article-body > h3"),
       ].map(element => getElementOffset(element).top)
     )
   }, [])
