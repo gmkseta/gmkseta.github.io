@@ -66,6 +66,9 @@ module.exports = {
       options: {
         trackingId: process.env.GA_TRACKING_ID,
         head: true,
+        gTagConfig: {
+          optimize_id: "GTM-M3WPXMJ",
+        },
       },
     },
     {
