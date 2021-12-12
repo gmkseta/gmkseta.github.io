@@ -38,11 +38,19 @@ const StyledMarkdown = styled.div`
     font-weight: 700;
   }
 
+  & h1 {
+    margin-top: 64px;
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+
   & h2 {
     margin-top: 64px;
     margin-bottom: 24px;
     font-size: 28px;
   }
+
+
 
   & h3 {
     margin-top: 48px;
