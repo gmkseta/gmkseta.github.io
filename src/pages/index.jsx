@@ -47,7 +47,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { ne: "회고" } } }) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
