@@ -85,14 +85,14 @@ const RecommendList =  () => {
     <Wrapper>
       {recommends.map(({title, link, icon, tag=""}, idx) => (
           <Card key={idx} style={idx == 0? {opacity: 0.3} : {}}>
-            <CardTitle>
-              <Link to={link}>
-                  {title}  {tag && <Tag>{tag}</Tag>}
-              </Link>
-            </CardTitle>
-            <CardIcon>
-              {icon}
-            </CardIcon>
+            <Link to={link}>
+              <CardTitle>
+                    {title}  {tag && <Tag>{tag}</Tag>}
+              </CardTitle>
+              <CardIcon>
+                {icon}
+              </CardIcon>
+            </Link>
           </Card>
       ))}
 
