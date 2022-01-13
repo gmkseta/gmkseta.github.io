@@ -1,4 +1,4 @@
 
 [submodule "contents"]
 	path = contents
-	url = git@github.com:gmkseta/TIL.git
+	url = https://github.com/gmkseta/TIL.git
