@@ -86,7 +86,7 @@ const PostList = ({ postList }) => {
             </PostWrapper>
 
             {postCount - 1 !== i && postList.length - 1 !== i && (
-              <Divider mt="48px" mb="32px" />
+              <Divider mt="16px" mb="24px" />
             )}
           </>
         )

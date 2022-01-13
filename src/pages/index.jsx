@@ -31,7 +31,7 @@ const BlogIndex = ({ data }) => {
       <SEO title={title} description={description} url={siteUrl} />
       <VerticalSpace size={48} />
       <Bio />
-      <Divider />
+      <Divider mt="16px" mb="24px" />
       <SideTagList tags={tags} postCount={posts.length} />
       <PostList postList={posts} />
     </Layout>
@@ -47,7 +47,17 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { ne: "회고" } } }) {
+    allMarkdownRemark(
+        sort: { 
+          fields: [frontmatter___date], order: DESC 
+        }, 
+        filter: { 
+          frontmatter: { 
+            tags: { ne: "회고" },
+            visibility: {ne: false}
+          }
+        }
+      ){
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
