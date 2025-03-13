@@ -7,11 +7,20 @@ module.exports = {
     github: "https://github.com/gmkseta",
     linkedIn: "https://www.linkedin.com/in/성준-김-b35195225/",
     instagram: "https://www.instagram.com/castle_junny",
-    email: "mailto:gmkseta@gmail.com",
     etc: "https://career.seongjun.kr",
+    email: "mailto:gmkseta@gmail.com",
   },
-  utterances: {
-    repo: "gmkseta/gmkseta.github.io",
-    type: "pathname",
+  useAbout: true,
+  // See https://giscus.app/
+  giscus: {
+    repo: "devHudi/gatsby-starter-hoodie",
+    repoId: "MDEwOlJlcG9zaXRvcnkzNjk4NjMzNTg=",
+    category: "Comments",
+    categoryId: "DIC_kwDOFguqvs4ChwGy",
+    mapping: "pathname",
+    strict: "0",
+    reactionsEnabled: "1",
+    inputPosition: "bottom",
+    lang: "en",
   },
 }

@@ -53,10 +53,12 @@ const Date = styled.span`
   font-weight: lighter;
 `
 
-const Series = ({ pathContext, data }) => {
+
+const Series = ({ pageContext, data }) => {
+
   const seriesName = pathContext.series
   let posts = data.posts.nodes
-  if (seriesName == "주간 회고록"){
+  if (seriesName === "주간 회고록"){
     posts = posts.reverse()
   }
 

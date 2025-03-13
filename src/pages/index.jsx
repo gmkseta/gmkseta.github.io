@@ -7,9 +7,9 @@ import SEO from "components/SEO"
 import Bio from "components/Bio"
 import PostList from "components/PostList"
 import SideTagList from "components/SideTagList"
-import Divider from "components/Divider"
 import VerticalSpace from "components/VerticalSpace"
 import RecommendList from "components/RecommendList"
+import Tab from "components/Tab"
 
 import { title, description, siteUrl } from "../../blog-config"
 
@@ -35,6 +35,7 @@ const BlogIndex = ({ data }) => {
       <Divider mt="16px" mb="24px" />
       <RecommendList></RecommendList>
       <Divider mt="16px" mb="24px" />
+      <Tab postsCount={posts.length} activeTab="posts" />
       <SideTagList tags={tags} postCount={posts.length} />
       <PostList postList={posts} />
     </Layout>
@@ -58,7 +59,8 @@ export const pageQuery = graphql`
           frontmatter: { 
             tags: { ne: "회고" },
             visibility: {ne: false}
-          }
+          },
+          fileAbsolutePath: { regex: "/contents/posts/" }
         }
       ){
       group(field: frontmatter___tags) {
