@@ -13,9 +13,10 @@ jobs:
     env:
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: true
+
       - name: Checkout submodules
         run: git submodule update --init --recursive --remote
 
