@@ -34,6 +34,7 @@ const BlogIndex = ({ data }) => {
   const aboutPost = data.markdownRemark
   const postsCount = data.allMarkdownRemark.totalCount
 
+
   if (!useAbout) return <NotFoundPage />
 
   return (
@@ -44,9 +45,9 @@ const BlogIndex = ({ data }) => {
       <Tab postsCount={postsCount} activeTab="about" />
       <Article>
         <Wrapper>
-          <ArticleTitle>{aboutPost.frontmatter.title}</ArticleTitle>
+          <ArticleTitle>{aboutPost?.frontmatter?.title}</ArticleTitle>
         </Wrapper>
-        <Article.Body html={aboutPost.html} hideToc />
+        <Article.Body html={aboutPost?.html} hideToc />
         <Wrapper>
           <Divider />
           <Comment />

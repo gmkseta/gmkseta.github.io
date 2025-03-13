@@ -18,6 +18,6 @@ jobs:
           submodules: true
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ github.token }}
           deploy-branch: gh-pages
           skip-publish: false

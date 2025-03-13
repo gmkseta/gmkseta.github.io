@@ -8,10 +8,10 @@ import Bio from "components/Bio"
 import PostList from "components/PostList"
 import SideTagList from "components/SideTagList"
 import VerticalSpace from "components/VerticalSpace"
-import RecommendList from "components/RecommendList"
 import Tab from "components/Tab"
 
-import { title, description, siteUrl } from "../../blog-config"
+import { description, siteUrl, title } from "../../blog-config"
+import RecommendList from "../components/RecommendList"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -32,9 +32,7 @@ const BlogIndex = ({ data }) => {
       <SEO title={title} description={description} url={siteUrl} />
       <VerticalSpace size={48} />
       <Bio />
-      <Divider mt="16px" mb="24px" />
-      <RecommendList></RecommendList>
-      <Divider mt="16px" mb="24px" />
+      {/*<RecommendList/>*/}
       <Tab postsCount={posts.length} activeTab="posts" />
       <SideTagList tags={tags} postCount={posts.length} />
       <PostList postList={posts} />

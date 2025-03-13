@@ -10,7 +10,7 @@ module.exports = {
     etc: "https://career.seongjun.kr",
     email: "mailto:gmkseta@gmail.com",
   },
-  useAbout: true,
+  useAbout: false,
   // See https://giscus.app/
   giscus: {
     repo: "devHudi/gatsby-starter-hoodie",
