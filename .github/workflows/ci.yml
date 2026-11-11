@@ -21,6 +21,6 @@ jobs:
           node-version: 24
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ github.token }}
+          access-token: x-access-token:${{ github.token }}
           deploy-branch: gh-pages
           skip-publish: false
