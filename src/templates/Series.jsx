@@ -56,7 +56,7 @@ const Date = styled.span`
 
 const Series = ({ pageContext, data }) => {
 
-  const seriesName = pathContext.series
+  const seriesName = pageContext.series
   let posts = data.posts.nodes
   if (seriesName === "주간 회고록"){
     posts = posts.reverse()

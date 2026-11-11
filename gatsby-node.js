@@ -114,3 +114,10 @@ exports.createSchemaCustomization = ({ actions }) => {
   `
   createTypes(typeDefs)
 }
+
+// 운영 빌드에서 소스맵(.js.map)을 만들지 않는다. 공개 사이트에 원본 소스가 노출되지 않게.
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage === "build-javascript") {
+    actions.setWebpackConfig({ devtool: false })
+  }
+}
